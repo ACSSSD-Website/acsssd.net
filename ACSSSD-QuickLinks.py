@@ -180,7 +180,7 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-QuickLinks.
             <div class="software-description">{name}</div>
         </div>
                     """
-                    if name in ["Vector Training", "Employee Payroll Portal", "Realtime", "Facilities Request", "Tech Support", "Classwize (acsssd.nj.us)"]:
+                    if name in ["Realtime", "Facilities Request", "Tech Support", "Classwize (acsssd.nj.us)"]:
                         common_items.append(item_html)
                     elif name in ["Classroom", "Drive", "Gmail"]:
                         google_workspace_items.append(item_html)
