@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACIT District Applications</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 20
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: #2a4380;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px; /* Explicitly set the header height */
+            flex-wrap: wrap; /* Allow wrapping on small screens */
+        }
+
+        @media (max-width: 600px) { /* Adjust breakpoint as needed */
+            header {
+                height: auto; /* Allow header to expand */
+                align-items: flex-start; /* Align items to top on wrap */
+            }
+            #search-container, .header-links {
+                width: 100%; /* Take full width on small screens */
+            }
+            #search-container {
+                margin-bottom: 10px;
+            }
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #search-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        #search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0;
+        }
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 10px;
+        }
+
+        .software-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .software-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .software-icon {
+            font-size: 3em;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .software-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .software-help-container {
+            display: flex;
+            gap: 8px;
+        }
+
+        .software-help-link {
+            text-decoration: none;
+            color: #888;
+            display: inline-block;
+            line-height: 1;
+            margin-top: 5px;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .software-help-link .material-symbols-outlined {
+            font-size: 1.5em;
+            vertical-align: middle;
+        }
+
+        .software-help-link:hover {
+            color: #79282a;
+        }
+
+        .software-description {
+            display: none;
+        }
+
+        #help-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        #help-link span {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search Applications...">
+        </div>
+        <div class="header-links">
+            <div class="software-help-container">
+                <a id="help-link" href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/catalog/items/547" target="_blank" rel="noopener noreferrer">
+                    <span class="material-symbols-outlined">visibility_off</span> Don't See Your Application
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="software-grid" id="software-grid">
+
+            <div class="software-item" data-name="Acadience Learning">
+                <a href="https://clever.com/oauth/instant-login?client_id=29abca420b8c0e54c66b&district_id=5ba023b5f6cd4800018eb868" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #230015;">Apps</span>
+                    <div class="software-name">Acadience Learning</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Acadience Learning</div>
+            </div>
+            
+            <div class="software-item" data-name="ACE App">
+                <a href="https://aceapp.org/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #e302b1;">Apps</span>
+                    <div class="software-name">ACE App</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">ACE App</div>
+            </div>
+            
+            <div class="software-item" data-name="Boom Cards">
+                <a href="https://wow.boomlearning.com/signin" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #0a6f63;">Apps</span>
+                    <div class="software-name">Boom Cards</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Boom Cards</div>
+            </div>
+            
+            <div class="software-item" data-name="Boardmaker Online">
+                <a href="https://www.myboardmaker.com/subscription/login" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #7016b2;">Apps</span>
+                    <div class="software-name">Boardmaker Online</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Boardmaker Online</div>
+            </div>
+            
+            <div class="software-item" data-name="BrainPOP">
+                <a href="https://www.brainpop.com/login" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #0c7f70;">Apps</span>
+                    <div class="software-name">BrainPOP</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">BrainPOP</div>
+            </div>
+            
+            <div class="software-item" data-name="Fun Hub">
+                <a href="https://clever.com/oauth/instant-login?client_id=8d6fc83125be67036960&district_id=5ba023b5f6cd4800018eb868" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #3f312b;">Apps</span>
+                    <div class="software-name">Fun Hub</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Fun Hub</div>
+            </div>
+            
+            <div class="software-item" data-name="Flocabulary">
+                <a href="https://www.flocabulary.com/?signup=login" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #c4aefb;">Apps</span>
+                    <div class="software-name">Flocabulary</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Flocabulary</div>
+            </div>
+            
+            <div class="software-item" data-name="HMH Go Math">
+                <a href="https://www.hmhco.com/ui/login" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #228ff8;">Apps</span>
+                    <div class="software-name">HMH Go Math</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">HMH Go Math</div>
+            </div>
+            
+            <div class="software-item" data-name="HelpKiddzLearn">
+                <a href="https://www.helpkidzlearn.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #26f1ad;">Apps</span>
+                    <div class="software-name">HelpKiddzLearn</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">HelpKiddzLearn</div>
+            </div>
+            
+            <div class="software-item" data-name="LetsGoLearn">
+                <a href="https://frontend.letsgolearn.com/login" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #87afc1;">Apps</span>
+                    <div class="software-name">LetsGoLearn</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">LetsGoLearn</div>
+            </div>
+            
+            <div class="software-item" data-name="Starfall">
+                <a href="https://www.starfall.com/h/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #9976db;">Apps</span>
+                    <div class="software-name">Starfall</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Starfall</div>
+            </div>
+            
+            <div class="software-item" data-name="Tumblebooks">
+                <a href="https://www.tumblebooklibrary.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #765227;">Apps</span>
+                    <div class="software-name">Tumblebooks</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Tumblebooks</div>
+            </div>
+            
+            <div class="software-item" data-name="Unique Learning/News 2 You">
+                <a href="https://login.n2y.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #7ddf6e;">Apps</span>
+                    <div class="software-name">Unique Learning/News 2 You</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Unique Learning/News 2 You</div>
+            </div>
+            
+            <div class="software-item" data-name="Remind App">
+                <a href="https://remind.com/" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #9877fb;">Apps</span>
+                    <div class="software-name">Remind App</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Remind App</div>
+            </div>
+            
+            <div class="software-item" data-name="Passwords">
+                <a href="https://docs.google.com/document/d/1PyHto29ccn1L9mCN9r86qIEfGMI7LnuklTW-uK1baHs/edit" target="_blank" style="text-decoration: none; color: inherit;">
+                    <span class="software-icon icon-atlas material-symbols-outlined" style="color: #95bbda;">Apps</span>
+                    <div class="software-name">Passwords</div>
+                </a>
+                <div class="software-help-container">
+                    <a href="https://atlanticcountyinstituteofthelpdesk.freshservice.com/support/tickets/new" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
+                        <span class="material-symbols-outlined">support_agent</span>
+                    </a>
+                </div>
+                <div class="software-description">Passwords</div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const softwareItems = document.querySelectorAll('.software-item');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            softwareItems.forEach(item => {
+                const softwareName = item.dataset.name.toLowerCase();
+                if (softwareName.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
