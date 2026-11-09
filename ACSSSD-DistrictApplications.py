@@ -183,7 +183,7 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-DistrictApp
 """
 
             for row in reader:
-                name, link, help_link = row
+                name, link = row
 
                 if name and link:
                     random_color = f"#{random.randint(0, 255):02x}{random.randint(0, 255):02x}{random.randint(0, 255):02x}"
@@ -193,11 +193,6 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-DistrictApp
                     <span class="software-icon icon-atlas material-symbols-outlined" style="color: {random_color};">Apps</span>
                     <div class="software-name">{name}</div>
                 </a>
-                <div class="software-help-container">
-                    <a href="{help_link}" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
-                        <span class="material-symbols-outlined">support_agent</span>
-                    </a>
-                </div>
                 <div class="software-description">{name}</div>
             </div>
             """
