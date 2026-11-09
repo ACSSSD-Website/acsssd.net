@@ -21,7 +21,7 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-DistrictApp
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACIT District Applications</title>
+    <title>ACSSSD District Applications</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         .material-symbols-outlined {
