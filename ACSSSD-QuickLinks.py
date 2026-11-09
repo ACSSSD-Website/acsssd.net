@@ -174,7 +174,7 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-QuickLinks.
             <div class="software-description">{name}</div>
         </div>
                     """
-                    if name in ["Realtime", "Facilities Request", "Tech Support (servicedesk@acsssd.net)", "Employee Payroll Portal"]:
+                    if name in ["Realtime", "Facilities Request", "Tech Support", "Employee Payroll Portal"]:
                         common_items.append(item_html)
                     elif name in ["Classroom", "Drive", "Gmail"]:
                         google_workspace_items.append(item_html)
