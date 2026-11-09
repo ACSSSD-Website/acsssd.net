@@ -160,7 +160,7 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-QuickLinks.
             other_items = []
 
             for row in reader:
-                name, link, icon_url, help_link = row
+                name, link, icon_url = row
 
                 if name and link and icon_url:
                     item_html = f"""
@@ -171,16 +171,10 @@ def generate_quicklinks_html(csv_file_path, output_html_path="ACSSSD-QuickLinks.
                 </div>
                 <div class="software-name">{name}</div>
             </a>
-            <div class="software-help-container">
-                </a>
-                <a href="{help_link}" class="software-help-link" target="_blank" rel="noopener noreferrer" title="Get Help">
-                    <span class="material-symbols-outlined">support_agent</span>
-                </a>
-            </div>
             <div class="software-description">{name}</div>
         </div>
                     """
-                    if name in ["Realtime", "Facilities Request", "Tech Support", "Classwize (acsssd.nj.us)"]:
+                    if name in ["Realtime", "Facilities Request", "Tech Support (servicedesk@acsssd.net)", "Employee Payroll Portal"]:
                         common_items.append(item_html)
                     elif name in ["Classroom", "Drive", "Gmail"]:
                         google_workspace_items.append(item_html)
